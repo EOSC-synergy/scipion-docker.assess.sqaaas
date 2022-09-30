@@ -1,0 +1,46 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: 1.7.0_no_kubectl
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/I2PC/scipion-docker:
+      branch: master
+      repo: https://github.com/I2PC/scipion-docker
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/I2PC/scipion-docker git:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-pink-greyhound.sh
+        container: qc.acc_baggy-malachite-dragon
+  QC.Doc:
+    repos:
+      github.com/I2PC/scipion-docker find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.wiggy-jade-mau.sh
+        container: qc.doc_cozy-copper-falcon
+      github.com/I2PC/scipion-docker git:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-cerise-mau.sh
+        container: qc.doc_stinky-teal-chamois
+      github.com/I2PC/scipion-docker markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-flax-armadillo.sh
+        container: qc.doc_woozy-champagne-dalmatian
+  QC.Lic:
+    repos:
+      github.com/I2PC/scipion-docker licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-celadon-warthog.sh
+        container: qc.lic_sloppy-cobalt-penguin
+  QC.Ver:
+    repos:
+      github.com/I2PC/scipion-docker get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.hilly-periwinkle-fly.sh
+        container: qc.ver_pretty-cream-fly
+timeout: 1800
