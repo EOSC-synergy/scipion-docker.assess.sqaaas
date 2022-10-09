@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.7.0_no_kubectl
+      branch: release/1.7.2
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/I2PC/scipion-docker:
       branch: master
@@ -15,32 +15,52 @@ sqa_criteria:
     repos:
       github.com/I2PC/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-pink-greyhound.sh
-        container: qc.acc_baggy-malachite-dragon
+        - /usr/bin/env sh .sqa/script.skinny-malachite-seal.sh
+        container: qc.acc_boozy-amethyst-mammoth
   QC.Doc:
     repos:
       github.com/I2PC/scipion-docker find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-jade-mau.sh
-        container: qc.doc_cozy-copper-falcon
+        - /usr/bin/env sh .sqa/script.goopy-viridian-fish.sh
+        container: qc.doc_pretty-black-booby
       github.com/I2PC/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-cerise-mau.sh
-        container: qc.doc_stinky-teal-chamois
+        - /usr/bin/env sh .sqa/script.dorky-cobalt-capuchin.sh
+        container: qc.doc_stinky-violet-hummingbird
       github.com/I2PC/scipion-docker markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-flax-armadillo.sh
-        container: qc.doc_woozy-champagne-dalmatian
+        - /usr/bin/env sh .sqa/script.wimpy-maroon-tarantula.sh
+        container: qc.doc_squeaky-azure-shrew
   QC.Lic:
     repos:
       github.com/I2PC/scipion-docker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-celadon-warthog.sh
-        container: qc.lic_sloppy-cobalt-penguin
+        - /usr/bin/env sh .sqa/script.cloudy-taupe-barb.sh
+        container: qc.lic_baggy-buff-numbat
+  QC.Sec:
+    repos:
+      github.com/I2PC/scipion-docker bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-chocolate-grouse.sh
+        container: qc.sec_flabby-purple-sloth
+  QC.Sty:
+    repos:
+      github.com/I2PC/scipion-docker flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-jade-duck.sh
+        container: qc.sty_bumpy-champagne-chipmunk
+      github.com/I2PC/scipion-docker hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.pokey-linen-chihuahua.sh
+        container: qc.sty_paltry-azure-pinscher
+      github.com/I2PC/scipion-docker jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-black-catfish.sh
+        container: qc.sty_muggy-aqua-tarsier
   QC.Ver:
     repos:
       github.com/I2PC/scipion-docker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-periwinkle-fly.sh
-        container: qc.ver_pretty-cream-fly
+        - /usr/bin/env sh .sqa/script.dorky-sapphire-urchin.sh
+        container: qc.ver_stealthy-lime-tarantula
 timeout: 1800
