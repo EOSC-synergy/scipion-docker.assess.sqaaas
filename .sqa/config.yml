@@ -18,38 +18,42 @@ sqa_criteria:
     repos:
       github.com/Ratolon/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-cobalt-beagle.sh
-        container: qc.acc_cheeky-seashell-eleuth
+        - /usr/bin/env sh .sqa/script.sickly-flax-cuscus.sh
+        container: qc.acc_woolly-white-hummingbird
   QC.Doc:
     repos:
       github.com/Ratolon/docs find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-olivine-loon.sh
-        container: qc.doc_goopy-burgundy-raccoon
+        - /usr/bin/env sh .sqa/script.sunny-beige-whale.sh
+        container: qc.doc_pretty-khaki-insect
       github.com/Ratolon/docs git:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-lime-maltese.sh
-        container: qc.doc_crappy-cornflower-barb
+        - /usr/bin/env sh .sqa/script.randy-rust-ray.sh
+        container: qc.doc_crabby-buff-robin
+      github.com/Ratolon/docs markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-yellow-lobster.sh
+        container: qc.doc_bluesy-malachite-bandicoot
       github.com/Ratolon/docs restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-violet-bison.sh
-        container: qc.doc_breezy-ivory-vole
+        - /usr/bin/env sh .sqa/script.zippy-khaki-ostrich.sh
+        container: qc.doc_jumpy-carmine-discus
   QC.Lic:
     repos:
       github.com/Ratolon/scipion-docker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-ochre-crane.sh
-        container: qc.lic_sloppy-salmon-eleuth
+        - /usr/bin/env sh .sqa/script.freaky-razzmatazz-tiger.sh
+        container: qc.lic_trippy-magnolia-bongo
   QC.Sty:
     repos:
       github.com/Ratolon/scipion-docker hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-apricot-spaniel.sh
-        container: qc.sty_nippy-bistre-dolphin
+        - /usr/bin/env sh .sqa/script.lovely-violet-moth.sh
+        container: qc.sty_messy-cornflower-fousek
   QC.Ver:
     repos:
       github.com/Ratolon/scipion-docker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-seashell-bobcat.sh
-        container: qc.ver_droopy-puce-tapir
+        - /usr/bin/env sh .sqa/script.slaphappy-linen-baboon.sh
+        container: qc.ver_boozy-lilac-mayfly
 timeout: 1800
