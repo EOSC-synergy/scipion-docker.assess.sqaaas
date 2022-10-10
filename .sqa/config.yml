@@ -18,38 +18,38 @@ sqa_criteria:
     repos:
       github.com/Ratolon/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-white-zebra.sh
-        container: qc.acc_crabby-ecru-capuchin
+        - /usr/bin/env sh .sqa/script.slimy-cobalt-beagle.sh
+        container: qc.acc_cheeky-seashell-eleuth
   QC.Doc:
     repos:
       github.com/Ratolon/docs find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-thistle-akbash.sh
-        container: qc.doc_geeky-magenta-cuscus
+        - /usr/bin/env sh .sqa/script.craggy-olivine-loon.sh
+        container: qc.doc_goopy-burgundy-raccoon
       github.com/Ratolon/docs git:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-rose-toucan.sh
-        container: qc.doc_stealthy-buff-eel
+        - /usr/bin/env sh .sqa/script.slaphappy-lime-maltese.sh
+        container: qc.doc_crappy-cornflower-barb
       github.com/Ratolon/docs restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-heliotrope-ladybird.sh
-        container: qc.doc_geeky-sepia-rat
+        - /usr/bin/env sh .sqa/script.stealthy-violet-bison.sh
+        container: qc.doc_breezy-ivory-vole
   QC.Lic:
     repos:
       github.com/Ratolon/scipion-docker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-burgundy-angora.sh
-        container: qc.lic_chummy-linen-affenpinscher
+        - /usr/bin/env sh .sqa/script.clammy-ochre-crane.sh
+        container: qc.lic_sloppy-salmon-eleuth
   QC.Sty:
     repos:
       github.com/Ratolon/scipion-docker hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-gold-rattlesnake.sh
-        container: qc.sty_slimy-pumpkin-mule
+        - /usr/bin/env sh .sqa/script.clammy-apricot-spaniel.sh
+        container: qc.sty_nippy-bistre-dolphin
   QC.Ver:
     repos:
       github.com/Ratolon/scipion-docker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-turquoise-squirrel.sh
-        container: qc.ver_sickly-malachite-giraffe
+        - /usr/bin/env sh .sqa/script.chummy-seashell-bobcat.sh
+        container: qc.ver_droopy-puce-tapir
 timeout: 1800
