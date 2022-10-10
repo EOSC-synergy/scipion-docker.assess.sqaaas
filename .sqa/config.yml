@@ -18,48 +18,42 @@ sqa_criteria:
     repos:
       github.com/Ratolon/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-platinum-peccary.sh
-        container: qc.acc_leaky-bronze-goat
+        - /usr/bin/env sh .sqa/script.smelly-crimson-hedgehog.sh
+        container: qc.acc_surly-coral-orangutan
   QC.Doc:
     repos:
       github.com/Ratolon/docs find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-cerise-newfoundland.sh
-        container: qc.doc_craggy-red-sponge
+        - /usr/bin/env sh .sqa/script.chummy-mauve-ferret.sh
+        container: qc.doc_nerdy-ruby-fox
       github.com/Ratolon/docs git:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-amethyst-llama.sh
-        container: qc.doc_stinky-wisteria-hare
+        - /usr/bin/env sh .sqa/script.slimy-grey-magpie.sh
+        container: qc.doc_seedy-xanthic-uguisu
       github.com/Ratolon/docs markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-smalt-hornet.sh
-        container: qc.doc_baggy-purple-barnacle
+        - /usr/bin/env sh .sqa/script.chummy-pumpkin-liger.sh
+        container: qc.doc_whiny-myrtle-chin
       github.com/Ratolon/docs restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-buff-binturong.sh
-        container: qc.doc_whiny-russet-dalmatian
+        - /usr/bin/env sh .sqa/script.homey-peach-hare.sh
+        container: qc.doc_zippy-puce-bordeaux
   QC.Lic:
     repos:
       github.com/Ratolon/scipion-docker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-olive-russel.sh
-        container: qc.lic_silly-cardinal-husky
-  QC.Met:
-    repos:
-      github.com/Ratolon/scipion-docker cff-converter-python:
-        commands:
-        - /usr/bin/env sh .sqa/script.scanty-cinnabar-tortoise.sh
-        container: qc.met_stealthy-goldenrod-dhole
+        - /usr/bin/env sh .sqa/script.lumpy-brown-dugong.sh
+        container: qc.lic_freaky-pink-hamster
   QC.Sty:
     repos:
       github.com/Ratolon/scipion-docker hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-turquoise-millipede.sh
-        container: qc.sty_shaggy-orchid-ostrich
+        - /usr/bin/env sh .sqa/script.flimsy-buff-dhole.sh
+        container: qc.sty_homely-brown-mayfly
   QC.Ver:
     repos:
       github.com/Ratolon/scipion-docker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-razzmatazz-gecko.sh
-        container: qc.ver_lovely-sapphire-harrier
+        - /usr/bin/env sh .sqa/script.droopy-platinum-barracuda.sh
+        container: qc.ver_pasty-cream-macaw
 timeout: 1800
