@@ -4,12 +4,12 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/Ratolon/docs:
+      branch: ibergrid22
+      repo: https://github.com/Ratolon/docs
     github.com/Ratolon/scipion-docker:
       branch: ibergrid22
       repo: https://github.com/Ratolon/scipion-docker
-    github.com/scipion-em/docs:
-      branch: release-3.0.0
-      repo: https://github.com/scipion-em/docs
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
@@ -18,38 +18,38 @@ sqa_criteria:
     repos:
       github.com/Ratolon/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-violet-termite.sh
-        container: qc.acc_snappy-platinum-paradise
+        - /usr/bin/env sh .sqa/script.pretty-lilac-beaver.sh
+        container: qc.acc_skimpy-ultramarine-sheep
   QC.Doc:
     repos:
-      github.com/scipion-em/docs find_doc_files.py:
+      github.com/Ratolon/docs find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-amaranth-dragon.sh
-        container: qc.doc_skimpy-cyan-chow
-      github.com/scipion-em/docs git:
+        - /usr/bin/env sh .sqa/script.clammy-magnolia-peccary.sh
+        container: qc.doc_breezy-sepia-jaguar
+      github.com/Ratolon/docs git:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-platinum-horse.sh
-        container: qc.doc_cloudy-cyan-gorilla
-      github.com/scipion-em/docs restructuredtext-lint:
+        - /usr/bin/env sh .sqa/script.smelly-cerise-kakapo.sh
+        container: qc.doc_ready-fuchsia-fossa
+      github.com/Ratolon/docs restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-asparagus-chameleon.sh
-        container: qc.doc_sunny-corn-chinook
+        - /usr/bin/env sh .sqa/script.bumpy-magnolia-millipede.sh
+        container: qc.doc_cozy-cinnamon-sheep
   QC.Lic:
     repos:
       github.com/Ratolon/scipion-docker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-cyan-dodo.sh
-        container: qc.lic_woozy-teal-bird
+        - /usr/bin/env sh .sqa/script.ready-yellow-falcon.sh
+        container: qc.lic_cheeky-malachite-alligator
   QC.Sty:
     repos:
       github.com/Ratolon/scipion-docker hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-xanthic-mouse.sh
-        container: qc.sty_chummy-puce-panda
+        - /usr/bin/env sh .sqa/script.cranky-copper-ragdoll.sh
+        container: qc.sty_trippy-persimmon-cassowary
   QC.Ver:
     repos:
       github.com/Ratolon/scipion-docker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-magnolia-reindeer.sh
-        container: qc.ver_nerdy-pear-fly
+        - /usr/bin/env sh .sqa/script.cheeky-gold-cockroach.sh
+        container: qc.ver_slaphappy-cobalt-greyhound
 timeout: 1800
