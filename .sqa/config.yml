@@ -2,65 +2,54 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.2
+      branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/I2PC/scipion-docker:
-      branch: master
-      repo: https://github.com/I2PC/scipion-docker
+    github.com/Ratolon/scipion-docker:
+      branch: ibergrid22
+      repo: https://github.com/Ratolon/scipion-docker
+    github.com/scipion-em/docs:
+      branch: release-3.0.0
+      repo: https://github.com/scipion-em/docs
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/I2PC/scipion-docker git:
+      github.com/Ratolon/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-malachite-seal.sh
-        container: qc.acc_boozy-amethyst-mammoth
+        - /usr/bin/env sh .sqa/script.fuzzy-violet-termite.sh
+        container: qc.acc_snappy-platinum-paradise
   QC.Doc:
     repos:
-      github.com/I2PC/scipion-docker find_doc_files.py:
+      github.com/scipion-em/docs find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-viridian-fish.sh
-        container: qc.doc_pretty-black-booby
-      github.com/I2PC/scipion-docker git:
+        - /usr/bin/env sh .sqa/script.cranky-amaranth-dragon.sh
+        container: qc.doc_skimpy-cyan-chow
+      github.com/scipion-em/docs git:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-cobalt-capuchin.sh
-        container: qc.doc_stinky-violet-hummingbird
-      github.com/I2PC/scipion-docker markdownlint:
+        - /usr/bin/env sh .sqa/script.cranky-platinum-horse.sh
+        container: qc.doc_cloudy-cyan-gorilla
+      github.com/scipion-em/docs restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-maroon-tarantula.sh
-        container: qc.doc_squeaky-azure-shrew
+        - /usr/bin/env sh .sqa/script.seedy-asparagus-chameleon.sh
+        container: qc.doc_sunny-corn-chinook
   QC.Lic:
     repos:
-      github.com/I2PC/scipion-docker licensee:
+      github.com/Ratolon/scipion-docker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-taupe-barb.sh
-        container: qc.lic_baggy-buff-numbat
-  QC.Sec:
-    repos:
-      github.com/I2PC/scipion-docker bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.stinky-chocolate-grouse.sh
-        container: qc.sec_flabby-purple-sloth
+        - /usr/bin/env sh .sqa/script.cranky-cyan-dodo.sh
+        container: qc.lic_woozy-teal-bird
   QC.Sty:
     repos:
-      github.com/I2PC/scipion-docker flake8:
+      github.com/Ratolon/scipion-docker hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-jade-duck.sh
-        container: qc.sty_bumpy-champagne-chipmunk
-      github.com/I2PC/scipion-docker hadolint:
-        commands:
-        - /usr/bin/env sh .sqa/script.pokey-linen-chihuahua.sh
-        container: qc.sty_paltry-azure-pinscher
-      github.com/I2PC/scipion-docker jsonlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.snappy-black-catfish.sh
-        container: qc.sty_muggy-aqua-tarsier
+        - /usr/bin/env sh .sqa/script.baggy-xanthic-mouse.sh
+        container: qc.sty_chummy-puce-panda
   QC.Ver:
     repos:
-      github.com/I2PC/scipion-docker get_git_tags.py:
+      github.com/Ratolon/scipion-docker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-sapphire-urchin.sh
-        container: qc.ver_stealthy-lime-tarantula
+        - /usr/bin/env sh .sqa/script.cheeky-magnolia-reindeer.sh
+        container: qc.ver_nerdy-pear-fly
 timeout: 1800
