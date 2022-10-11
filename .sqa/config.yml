@@ -18,42 +18,42 @@ sqa_criteria:
     repos:
       github.com/Ratolon/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-crimson-hedgehog.sh
-        container: qc.acc_surly-coral-orangutan
+        - /usr/bin/env sh .sqa/script.pasty-lavender-starfish.sh
+        container: qc.acc_frumpy-copper-tiger
   QC.Doc:
     repos:
       github.com/Ratolon/docs find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-mauve-ferret.sh
-        container: qc.doc_nerdy-ruby-fox
+        - /usr/bin/env sh .sqa/script.geeky-aquamarine-chamois.sh
+        container: qc.doc_breezy-cream-chimpanzee
       github.com/Ratolon/docs git:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-grey-magpie.sh
-        container: qc.doc_seedy-xanthic-uguisu
+        - /usr/bin/env sh .sqa/script.queasy-white-moorhen.sh
+        container: qc.doc_zippy-gold-indri
       github.com/Ratolon/docs markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-pumpkin-liger.sh
-        container: qc.doc_whiny-myrtle-chin
+        - /usr/bin/env sh .sqa/script.crabby-khaki-crane.sh
+        container: qc.doc_trippy-champagne-squid
       github.com/Ratolon/docs restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-peach-hare.sh
-        container: qc.doc_zippy-puce-bordeaux
+        - /usr/bin/env sh .sqa/script.shabby-pink-ocelot.sh
+        container: qc.doc_frumpy-mustard-cassowary
   QC.Lic:
     repos:
       github.com/Ratolon/scipion-docker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-brown-dugong.sh
-        container: qc.lic_freaky-pink-hamster
+        - /usr/bin/env sh .sqa/script.bumpy-zucchini-argentino.sh
+        container: qc.lic_fuzzy-emerald-bulldog
   QC.Sty:
     repos:
       github.com/Ratolon/scipion-docker hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-buff-dhole.sh
-        container: qc.sty_homely-brown-mayfly
+        - /usr/bin/env sh .sqa/script.sickly-pumpkin-fly.sh
+        container: qc.sty_flimsy-purple-tarantula
   QC.Ver:
     repos:
       github.com/Ratolon/scipion-docker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-platinum-barracuda.sh
-        container: qc.ver_pasty-cream-macaw
+        - /usr/bin/env sh .sqa/script.beady-corn-dugong.sh
+        container: qc.ver_boozy-peach-cow
 timeout: 1800
