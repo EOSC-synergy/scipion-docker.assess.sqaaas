@@ -1,59 +1,52 @@
 config:
   credentials: []
   project_repos:
+    github.com/EOSC-synergy/scipion-docker:
+      branch: devel
+      repo: https://github.com/EOSC-synergy/scipion-docker
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.4
+      branch: release/1.7.5
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/I2PC/scipion-docker:
-      branch: ibergrid22
-      repo: https://github.com/I2PC/scipion-docker
-    github.com/Ratolon/docs:
-      branch: ibergrid22
-      repo: https://github.com/Ratolon/docs
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/I2PC/scipion-docker git:
+      github.com/EOSC-synergy/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-ultramarine-millipede.sh
-        container: qc.acc_homey-cobalt-stoat
+        - /usr/bin/env sh .sqa/script.beady-lavender-fowl.sh
+        container: qc.acc_paltry-charcoal-bullfrog
   QC.Doc:
     repos:
-      github.com/Ratolon/docs find_doc_files.py:
+      github.com/EOSC-synergy/scipion-docker find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-emerald-spaniel.sh
-        container: qc.doc_muzzy-pumpkin-turtle
-      github.com/Ratolon/docs git:
+        - /usr/bin/env sh .sqa/script.breezy-cornflower-neanderthal.sh
+        container: qc.doc_hasty-chocolate-zebra
+      github.com/EOSC-synergy/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-periwinkle-caterpillar.sh
-        container: qc.doc_stuffy-cerise-kiwi
-      github.com/Ratolon/docs markdownlint:
+        - /usr/bin/env sh .sqa/script.silly-jade-chin.sh
+        container: qc.doc_cheeky-sapphire-bloodhound
+      github.com/EOSC-synergy/scipion-docker markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-ruby-otter.sh
-        container: qc.doc_cloudy-alizarin-dhole
-      github.com/Ratolon/docs restructuredtext-lint:
-        commands:
-        - /usr/bin/env sh .sqa/script.trippy-grey-dane.sh
-        container: qc.doc_nippy-khaki-tiger
+        - /usr/bin/env sh .sqa/script.foggy-asparagus-llama.sh
+        container: qc.doc_flimsy-dandelion-quoll
   QC.Lic:
     repos:
-      github.com/I2PC/scipion-docker licensee:
+      github.com/EOSC-synergy/scipion-docker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-puce-dog.sh
-        container: qc.lic_ugly-indigo-havanese
+        - /usr/bin/env sh .sqa/script.surly-emerald-tuatara.sh
+        container: qc.lic_geeky-chartreuse-tapir
   QC.Sty:
     repos:
-      github.com/I2PC/scipion-docker hadolint:
+      github.com/EOSC-synergy/scipion-docker hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-razzmatazz-lemur.sh
-        container: qc.sty_skanky-maroon-worm
+        - /usr/bin/env sh .sqa/script.cozy-firebrick-bongo.sh
+        container: qc.sty_ready-purple-baboon
   QC.Ver:
     repos:
-      github.com/I2PC/scipion-docker get_git_tags.py:
+      github.com/EOSC-synergy/scipion-docker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-mauve-lemming.sh
-        container: qc.ver_grumpy-malachite-loon
+        - /usr/bin/env sh .sqa/script.lousy-carmine-elephant.sh
+        container: qc.ver_woozy-champagne-capuchin
 timeout: 1800
