@@ -5,7 +5,7 @@ config:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/I2PC/scipion-docker:
-      branch: ibergrid22
+      branch: afteribergrid
       repo: https://github.com/I2PC/scipion-docker
     github.com/scipion-em/docs:
       branch: release-3.0.0
@@ -18,38 +18,38 @@ sqa_criteria:
     repos:
       github.com/I2PC/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-peach-indri.sh
-        container: qc.acc_bumpy-amber-lionfish
+        - /usr/bin/env sh .sqa/script.freaky-turquoise-caterpillar.sh
+        container: qc.acc_shabby-champagne-toucan
   QC.Doc:
     repos:
       github.com/scipion-em/docs find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-cinnabar-ferret.sh
-        container: qc.doc_flabby-gold-sponge
+        - /usr/bin/env sh .sqa/script.gimpy-lilac-bee.sh
+        container: qc.doc_chewy-vermilion-impala
       github.com/scipion-em/docs git:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-alizarin-shrimp.sh
-        container: qc.doc_skimpy-aquamarine-insect
+        - /usr/bin/env sh .sqa/script.baggy-lavender-macaque.sh
+        container: qc.doc_wimpy-tan-gecko
       github.com/scipion-em/docs restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-charcoal-fowl.sh
-        container: qc.doc_smelly-amaranth-ocelot
+        - /usr/bin/env sh .sqa/script.muzzy-viridian-turtle.sh
+        container: qc.doc_zippy-harlequin-tamarin
   QC.Lic:
     repos:
       github.com/I2PC/scipion-docker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-corn-forest.sh
-        container: qc.lic_squirrely-peach-ragdoll
+        - /usr/bin/env sh .sqa/script.thirsty-goldenrod-coati.sh
+        container: qc.lic_shaggy-cinnabar-squirrel
   QC.Sty:
     repos:
       github.com/I2PC/scipion-docker hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-saffron-tapir.sh
-        container: qc.sty_shaggy-violet-tapir
+        - /usr/bin/env sh .sqa/script.breezy-celadon-dodo.sh
+        container: qc.sty_cozy-teal-mule
   QC.Ver:
     repos:
       github.com/I2PC/scipion-docker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-amaranth-crocodile.sh
-        container: qc.ver_geeky-amethyst-tetra
+        - /usr/bin/env sh .sqa/script.flimsy-razzmatazz-stoat.sh
+        container: qc.ver_shaggy-bistre-rhinoceros
 timeout: 1800
