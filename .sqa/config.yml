@@ -18,42 +18,42 @@ sqa_criteria:
     repos:
       github.com/I2PC/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-plum-moose.sh
-        container: qc.acc_gimpy-orchid-audemer
+        - /usr/bin/env sh .sqa/script.whiny-ultramarine-millipede.sh
+        container: qc.acc_homey-cobalt-stoat
   QC.Doc:
     repos:
       github.com/Ratolon/docs find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-periwinkle-monkey.sh
-        container: qc.doc_lanky-brown-panda
+        - /usr/bin/env sh .sqa/script.shaky-emerald-spaniel.sh
+        container: qc.doc_muzzy-pumpkin-turtle
       github.com/Ratolon/docs git:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-ruby-mole.sh
-        container: qc.doc_pokey-rust-zorse
+        - /usr/bin/env sh .sqa/script.tasty-periwinkle-caterpillar.sh
+        container: qc.doc_stuffy-cerise-kiwi
       github.com/Ratolon/docs markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-alizarin-moth.sh
-        container: qc.doc_skimpy-periwinkle-tapir
+        - /usr/bin/env sh .sqa/script.snippy-ruby-otter.sh
+        container: qc.doc_cloudy-alizarin-dhole
       github.com/Ratolon/docs restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-red-dachshund.sh
-        container: qc.doc_cheeky-gamboge-loon
+        - /usr/bin/env sh .sqa/script.trippy-grey-dane.sh
+        container: qc.doc_nippy-khaki-tiger
   QC.Lic:
     repos:
       github.com/I2PC/scipion-docker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-amaranth-malamute.sh
-        container: qc.lic_skanky-aqua-bordeaux
+        - /usr/bin/env sh .sqa/script.leaky-puce-dog.sh
+        container: qc.lic_ugly-indigo-havanese
   QC.Sty:
     repos:
       github.com/I2PC/scipion-docker hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-violet-ostrich.sh
-        container: qc.sty_wiggy-flax-tang
+        - /usr/bin/env sh .sqa/script.cozy-razzmatazz-lemur.sh
+        container: qc.sty_skanky-maroon-worm
   QC.Ver:
     repos:
       github.com/I2PC/scipion-docker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-brass-argentino.sh
-        container: qc.ver_ready-magenta-grasshopper
+        - /usr/bin/env sh .sqa/script.paltry-mauve-lemming.sh
+        container: qc.ver_grumpy-malachite-loon
 timeout: 1800
