@@ -18,38 +18,38 @@ sqa_criteria:
     repos:
       github.com/I2PC/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-turquoise-caterpillar.sh
-        container: qc.acc_shabby-champagne-toucan
+        - /usr/bin/env sh .sqa/script.craggy-cobalt-capuchin.sh
+        container: qc.acc_gamy-malachite-crab
   QC.Doc:
     repos:
       github.com/scipion-em/docs find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-lilac-bee.sh
-        container: qc.doc_chewy-vermilion-impala
+        - /usr/bin/env sh .sqa/script.pasty-apricot-neanderthal.sh
+        container: qc.doc_gamy-aquamarine-pinscher
       github.com/scipion-em/docs git:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-lavender-macaque.sh
-        container: qc.doc_wimpy-tan-gecko
+        - /usr/bin/env sh .sqa/script.paltry-eggplant-maltese.sh
+        container: qc.doc_surly-cerise-starfish
       github.com/scipion-em/docs restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-viridian-turtle.sh
-        container: qc.doc_zippy-harlequin-tamarin
+        - /usr/bin/env sh .sqa/script.craggy-gamboge-uakari.sh
+        container: qc.doc_flabby-dandelion-setter
   QC.Lic:
     repos:
       github.com/I2PC/scipion-docker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-goldenrod-coati.sh
-        container: qc.lic_shaggy-cinnabar-squirrel
+        - /usr/bin/env sh .sqa/script.woozy-silver-moth.sh
+        container: qc.lic_snazzy-smalt-bulldog
   QC.Sty:
     repos:
       github.com/I2PC/scipion-docker hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-celadon-dodo.sh
-        container: qc.sty_cozy-teal-mule
+        - /usr/bin/env sh .sqa/script.slaphappy-scarlet-cuttlefish.sh
+        container: qc.sty_crappy-lemon-wrasse
   QC.Ver:
     repos:
       github.com/I2PC/scipion-docker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-razzmatazz-stoat.sh
-        container: qc.ver_shaggy-bistre-rhinoceros
+        - /usr/bin/env sh .sqa/script.skanky-russet-lemur.sh
+        container: qc.ver_dorky-flax-kiwi
 timeout: 1800
