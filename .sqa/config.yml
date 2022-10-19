@@ -1,52 +1,26 @@
 config:
-  credentials: []
+  credentials:
+  - id: upv_im_id
+    password_var: IM_PASS
+    username_var: IM_USER
+  - id: incd_openstack_id
+    password_var: OPENSTACK_PASS
+    username_var: OPENSTACK_USER
   project_repos:
-    github.com/EOSC-synergy/scipion-docker:
-      branch: devel
-      repo: https://github.com/EOSC-synergy/scipion-docker
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.5
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/eosc-synergy/scipion-docker:
+      branch: devel
+      repo: https://github.com/eosc-synergy/scipion-docker
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
-  QC.Acc:
+  SvcQC.Dep:
     repos:
-      github.com/EOSC-synergy/scipion-docker git:
+      github.com/eosc-synergy/scipion-docker im_client:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-lavender-fowl.sh
-        container: qc.acc_paltry-charcoal-bullfrog
-  QC.Doc:
-    repos:
-      github.com/EOSC-synergy/scipion-docker find_doc_files.py:
-        commands:
-        - /usr/bin/env sh .sqa/script.breezy-cornflower-neanderthal.sh
-        container: qc.doc_hasty-chocolate-zebra
-      github.com/EOSC-synergy/scipion-docker git:
-        commands:
-        - /usr/bin/env sh .sqa/script.silly-jade-chin.sh
-        container: qc.doc_cheeky-sapphire-bloodhound
-      github.com/EOSC-synergy/scipion-docker markdownlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.foggy-asparagus-llama.sh
-        container: qc.doc_flimsy-dandelion-quoll
-  QC.Lic:
-    repos:
-      github.com/EOSC-synergy/scipion-docker licensee:
-        commands:
-        - /usr/bin/env sh .sqa/script.surly-emerald-tuatara.sh
-        container: qc.lic_geeky-chartreuse-tapir
-  QC.Sty:
-    repos:
-      github.com/EOSC-synergy/scipion-docker hadolint:
-        commands:
-        - /usr/bin/env sh .sqa/script.cozy-firebrick-bongo.sh
-        container: qc.sty_ready-purple-baboon
-  QC.Ver:
-    repos:
-      github.com/EOSC-synergy/scipion-docker get_git_tags.py:
-        commands:
-        - /usr/bin/env sh .sqa/script.lousy-carmine-elephant.sh
-        container: qc.ver_woozy-champagne-capuchin
+        - /usr/bin/env sh .sqa/script.gloppy-yellow-hyena.sh
+        container: svcqc.dep_droopy-denim-bat
 timeout: 1800
