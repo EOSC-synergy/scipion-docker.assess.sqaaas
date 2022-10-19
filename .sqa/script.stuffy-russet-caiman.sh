@@ -17,10 +17,10 @@ ls -l /im/auth.dat
 echo
 
 
-cp im-topology-jenkins.yaml github.com/eosc-synergy/scipion-docker/im-topology-jenkins.yaml
-echo "Printing IM config file: github.com/eosc-synergy/scipion-docker/im-topology-jenkins.yaml"
-cat github.com/eosc-synergy/scipion-docker/im-topology-jenkins.yaml
-im_client.py -r "https://appsgrycap.i3m.upv.es:31443/im/" -a "/im/auth.dat" create_wait_outputs github.com/eosc-synergy/scipion-docker/im-topology-jenkins.yaml > ./im_yaml.json
+cp im-topology-jenkins.yaml github.com/EOSC-synergy/scipion-docker/im-topology-jenkins.yaml
+echo "Printing IM config file: github.com/EOSC-synergy/scipion-docker/im-topology-jenkins.yaml"
+cat github.com/EOSC-synergy/scipion-docker/im-topology-jenkins.yaml
+im_client.py -r "https://appsgrycap.i3m.upv.es:31443/im/" -a "/im/auth.dat" create_wait_outputs github.com/EOSC-synergy/scipion-docker/im-topology-jenkins.yaml > ./im_yaml.json
 RETURN_CODE=$?
 echo "im_client.py create_wait_outputs return code: ${RETURN_CODE}"
 echo "Infrastructure Manager output:"

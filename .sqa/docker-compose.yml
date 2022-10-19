@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_droopy-denim-bat:
+  svcqc.dep_gloppy-periwinkle-bear:
     entrypoint:
     - /bin/sleep
     - infinity
