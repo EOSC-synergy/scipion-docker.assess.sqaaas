@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_gummy-crimson-dolphin:
+  svcqc.dep_pretty-charcoal-bear:
     entrypoint:
     - /bin/sleep
     - infinity

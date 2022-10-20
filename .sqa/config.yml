@@ -21,6 +21,6 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/scipion-docker im_client:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-periwinkle-oyster.sh
-        container: svcqc.dep_gummy-crimson-dolphin
+        - /usr/bin/env sh .sqa/script.boozy-silver-tang.sh
+        container: svcqc.dep_pretty-charcoal-bear
 timeout: 1800
