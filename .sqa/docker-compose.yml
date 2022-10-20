@@ -1,5 +1,5 @@
 services:
-  svcqc.dep_nerdy-peach-bullfrog:
+  svcqc.dep_silly-crimson-koala:
     entrypoint:
     - /bin/sleep
     - infinity
