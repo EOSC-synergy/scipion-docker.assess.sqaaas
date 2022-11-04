@@ -5,7 +5,7 @@ config:
       branch: master
       repo: https://github.com/EOSC-synergy/scipion-docker
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.4
+      branch: release/1.7.5
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,38 +15,38 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-lavender-hippopotamus.sh
-        container: qc.acc_smelly-amethyst-mayfly
+        - /usr/bin/env sh .sqa/script.scaly-chartreuse-forest.sh
+        container: qc.acc_freaky-linen-monkey
   QC.Doc:
     repos:
       github.com/EOSC-synergy/scipion-docker find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-smalt-wolfhound.sh
-        container: qc.doc_sunny-olivine-turkey
+        - /usr/bin/env sh .sqa/script.snippy-cream-albatross.sh
+        container: qc.doc_gamy-blue-gar
       github.com/EOSC-synergy/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-goldenrod-saola.sh
-        container: qc.doc_lumpy-tomato-spoonbill
+        - /usr/bin/env sh .sqa/script.scummy-red-mammoth.sh
+        container: qc.doc_geeky-corn-olm
       github.com/EOSC-synergy/scipion-docker markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-xanthic-bison.sh
-        container: qc.doc_whiny-jade-ibis
+        - /usr/bin/env sh .sqa/script.whiny-yellow-hamster.sh
+        container: qc.doc_sunny-beige-whale
   QC.Lic:
     repos:
       github.com/EOSC-synergy/scipion-docker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-olivine-tamarin.sh
-        container: qc.lic_tacky-malachite-balinese
+        - /usr/bin/env sh .sqa/script.sunny-cerise-hyena.sh
+        container: qc.lic_lumpy-pumpkin-ostrich
   QC.Sty:
     repos:
       github.com/EOSC-synergy/scipion-docker hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-sepia-hound.sh
-        container: qc.sty_muggy-chartreuse-civet
+        - /usr/bin/env sh .sqa/script.sleazy-firebrick-sparrow.sh
+        container: qc.sty_pokey-razzmatazz-mandrill
   QC.Ver:
     repos:
       github.com/EOSC-synergy/scipion-docker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-brown-dollar.sh
-        container: qc.ver_shabby-cardinal-ray
+        - /usr/bin/env sh .sqa/script.slimy-cream-bobcat.sh
+        container: qc.ver_tacky-rose-owl
 timeout: 1800
