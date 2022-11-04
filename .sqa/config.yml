@@ -1,26 +1,52 @@
 config:
-  credentials:
-  - id: upv_im_id
-    password_var: IM_PASS
-    username_var: IM_USER
-  - id: incd_openstack_id
-    password_var: OPENSTACK_PASS
-    username_var: OPENSTACK_USER
+  credentials: []
   project_repos:
     github.com/EOSC-synergy/scipion-docker:
-      branch: devel
+      branch: master
       repo: https://github.com/EOSC-synergy/scipion-docker
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.5
+      branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
-  SvcQC.Dep:
+  QC.Acc:
     repos:
-      github.com/EOSC-synergy/scipion-docker im_client:
+      github.com/EOSC-synergy/scipion-docker git:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-turquoise-otter.sh
-        container: svcqc.dep_silly-crimson-koala
-timeout: 5400
+        - /usr/bin/env sh .sqa/script.pretty-lavender-hippopotamus.sh
+        container: qc.acc_smelly-amethyst-mayfly
+  QC.Doc:
+    repos:
+      github.com/EOSC-synergy/scipion-docker find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-smalt-wolfhound.sh
+        container: qc.doc_sunny-olivine-turkey
+      github.com/EOSC-synergy/scipion-docker git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamy-goldenrod-saola.sh
+        container: qc.doc_lumpy-tomato-spoonbill
+      github.com/EOSC-synergy/scipion-docker markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-xanthic-bison.sh
+        container: qc.doc_whiny-jade-ibis
+  QC.Lic:
+    repos:
+      github.com/EOSC-synergy/scipion-docker licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-olivine-tamarin.sh
+        container: qc.lic_tacky-malachite-balinese
+  QC.Sty:
+    repos:
+      github.com/EOSC-synergy/scipion-docker hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-sepia-hound.sh
+        container: qc.sty_muggy-chartreuse-civet
+  QC.Ver:
+    repos:
+      github.com/EOSC-synergy/scipion-docker get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-brown-dollar.sh
+        container: qc.ver_shabby-cardinal-ray
+timeout: 1800
